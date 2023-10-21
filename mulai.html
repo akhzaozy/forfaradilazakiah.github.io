@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Password untuk Melanjutkan</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Gaya untuk body (latar belakang) */
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+    
+        /* Gaya untuk container */
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan pada kontainer */
+        }
+    
+        /* Gaya untuk label */
+        label {
+            font-weight: bold;
+        }
+    
+        /* Gaya untuk input teks dan kata sandi */
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+    
+        /* Gaya untuk tombol */
+        input[type="button"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    
+        /* Gaya untuk tombol ketika dihover */
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+    
+        /* Gaya untuk h1 dan h3 */
+        h1, h3 {
+            text-align: center;
+            font-size: 20px;
+            padding: 10px;
+        }
+    
+        /* Gaya untuk elemen clue */
+        .container h1 {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    
+        .container h2 {
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        // Fungsi untuk menampilkan alert saat halaman dimuat
+        window.onload = function() {
+            alert("Haloo, Kenalin aku adalah Muhammad Akhza Fachrozy.\nWeb ini hanya untuk orang yang memiliki nama dibawah yaa!!!");
+        }
+    
+        // Fungsi untuk memeriksa kata sandi
+        function tampilkanAlertDanPindah() {
+            var nama = document.getElementById("nama").value;
+            var password = document.getElementById("password").value;
+    
+            if (password === "pacarku") {
+                alert("Hallo, " + nama + ", silahkan lanjut ke halaman berikutnya");
+                window.location.href = "hehe.html"; // Ganti dengan URL halaman berikutnya yang sesuai
+            } else {
+                alert("Kata sandi salah. Coba lagi.");
+            }
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="container">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" value="Faradila Zakiah Nur Hafitsa" readonly>
+        <br>
+        <label for="nim">NIM:</label>
+        <input type="text" id="nim" name="nim" value="10221066" readonly>
+        <br>
+        <label for="password">Masukkan Teka Teki:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <input type="button" class="btn btn-primary" value="Lanjut" onclick="tampilkanAlertDanPindah();">
+    </div>
+
+    <div class="container">
+        <h1>CLUEE</h1>
+        <h2>Aku seperti magnet, selalu tertarik padamu. Sebagai apakah peranku?</h2>
+    </div>
+</body>
+</html>

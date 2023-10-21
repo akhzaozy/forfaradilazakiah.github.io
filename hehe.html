@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hayolo</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+    
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+    
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    
+    <script>
+        function tampilkanAlertDanPindah() {
+            var selectedOption = document.querySelector('input[name="pilihan"]:checked');
+            var alertMessage = "";
+
+            if (selectedOption) {
+                var selectedValue = selectedOption.value;
+
+                switch (selectedValue) {
+                    case "Pilihan 1":
+                        alertMessage = "ihh kenapa sayangg memilih Jeon Jeong-guk (Jung0k).";
+                        break;
+                    case "Pilihan 2":
+                        alertMessage = "yeyy sayangmemilih Muhammad Akhza Fachrozy (ozy awokwok).";
+                        break;
+                    case "Pilihan 3":
+                        alertMessage = "Nyesel sih sayang kenapa gaa milih aku.";
+                        break;
+                }
+
+                alert(alertMessage);
+                window.location.href = "hehe2.html"; // Ganti dengan URL halaman berikutnya yang sesuai
+            } else {
+                alert("Pilih salah satu opsi terlebih dahulu!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="hehe2.html" method="post">
+        <h3>Pilih Siapa?</h3>
+        <label for="pilihan1">Jeon Jeong-guk (Jung0k)</label>
+        <input type="radio" id="pilihan1" name="pilihan" value="Pilihan 1">
+        <br>
+        <label for="pilihan2">Muhammad Akhza Fachrozy (ozy awokwok)</label>
+        <input type="radio" id="pilihan2" name="pilihan" value="Pilihan 2">
+        <br>
+        <label for="pilihan3">Min Yoon-gi (saranku pilih aku sih)</label>
+        <input type="radio" id="pilihan3" name="pilihan" value="Pilihan 3">
+        <br>
+        <input type="button" value="Kirim" onclick="tampilkanAlertDanPindah();">
+    </form>
+</body>
+</html>

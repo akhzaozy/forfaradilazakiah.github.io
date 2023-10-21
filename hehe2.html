@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hayolo</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+    
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+    
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function tampilkanAlertDanPindah() {
+            var pilihan = document.querySelector('input[name="pilihan"]:checked').value;
+            var alertMessage = "";
+
+            if (pilihan === "Sorry kita cuma temen yaa") {
+                alertMessage = "Kalau bubu cuma milih kita cuma temen sakit sih 😭";
+            } else if (pilihan === "Kamu Siapa ku?") {
+                alertMessage = "Kamu gamau anggap aku ta :(( 😭";
+            } else if (pilihan === "kamu itu cowo sekaligus pacar aku") {
+                alertMessage = "Yeyyy bersyukur banget bisa dianggap jadi cowo kamu hehe 😊🥰";
+            }
+
+            alert(alertMessage);
+            window.location.href = "hehe3.html"; // Ganti dengan URL halaman berikutnya yang sesuai
+        }
+    </script>
+</head>
+<body>
+    <form action="hehe3.html" method="post">
+        <h3>Aku ini apa mu sayangg?</h3>
+        <label for="pilihan1">Sorry kita cuma temen yaa</label>
+        <input type="radio" id="pilihan1" name="pilihan" value="Sorry kita cuma temen yaa">
+        <br>
+        <label for="pilihan2">Kamu Siapa ku?</label>
+        <input type="radio" id="pilihan2" name="pilihan" value="Kamu Siapa ku?">
+        <br>
+        <label for="pilihan3">kamu itu cowo sekaligus pacar aku</label>
+        <input type="radio" id="pilihan3" name="pilihan" value="kamu itu cowo sekaligus pacar aku">
+        <br>
+        <input type="submit" value="Kirim" onclick="tampilkanAlertDanPindah(); return false;">
+    </form>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hayolo</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+    
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+    
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        </style>
+</head>
+<body>
+    <form action="hehe4.html" method="post">
+        <h3>kita lebih baik apa?</h3>
+        <label for="pilihan1">Sama sama teruss lahh</label>
+        <input type="radio" id="pilihan1" name="pilihan" value="Sama sama teruss lahh">
+        <br>
+        <label for="pilihan2">Aku gabutuh kamuu</label>
+        <input type="radio" id="pilihan2" name="pilihan" value="Aku gabutuh kamuu">
+        <br>
+        <label for="pilihan3">Kamu Sendiri aja sana</label>
+        <input type="radio" id="pilihan3" name="pilihan" value="Kamu Sendiri aja sana">
+        <br>
+        <input type="submit" value="Kirim" onclick="tampilkanAlertDanPindah(); return false;">
+    </form>
+
+    <script>
+        function tampilkanAlertDanPindah() {
+            var pilihan = document.querySelector('input[name="pilihan"]:checked').value;
+            var alertMessage = "";
+
+            if (pilihan === "Sama sama teruss lahh") {
+                alertMessage = "Aku setuju, sama-sama terus!";
+            } else if (pilihan === "Aku gabutuh kamuu") {
+                alertMessage = "kan kamu cuma selingkuhan aku (wle)";
+            } else if (pilihan === "Kamu Sendiri aja sana") {
+                alertMessage = "Kalau begitu, kamu juga harus bahagia!";
+            }
+
+            alert(alertMessage);
+            window.location.href = "hehe4.html"; // Ganti dengan URL halaman berikutnya yang sesuai
+        }
+    </script>
+</body>
+</html>
